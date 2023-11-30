@@ -1,10 +1,19 @@
 # robosys2023 ros2
 [![test](https://github.com/kishinmikami/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/kishinmikami/mypkg/actions/workflows/test.yml)
 
+## コマンドの詳細
+
+## インストール方法
 
 ## 使い方
+* 端末１
 ```
-$ 
+$ ros2 run mypkg talker 
+```
+
+* 端末２
+```
+$ ros2 run mypkg listener
 ```
 ## 必要なソフトウェア
 * Python
@@ -13,7 +22,6 @@ $
 
 ## テスト環境
 * Ubuntu 22.04.2 LTS
-* ros2
 
 ## ライセンス関連
 
