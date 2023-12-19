@@ -33,8 +33,9 @@ $ git clone https://github.com/kishinmikami/mypkg.git
 ```
 $ ls
 ```
-以下のコマンドでビルドしてください.
+以下のコマンドでワークスペースに移動し, ビルドしてください.
 ```
+$ cd ~/(ご自身のros2のディレクトリ名)
 $ colcon build
 $ source ~/.bashrc
 ```

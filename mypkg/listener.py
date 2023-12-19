@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2023 Kishin Miakmi blackgodstone.k@gmail.com
+# SPDX-License-Identifier: BSD-3-Clause
+
 import rclpy
 import math
 from rclpy.node import Node
