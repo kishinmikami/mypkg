@@ -1,25 +1,28 @@
-# robosys2023 ros2
+# mypkg
 [![test](https://github.com/kishinmikami/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/kishinmikami/mypkg/actions/workflows/test.yml)
+
+このリポジトリは, talkerが走ってから何時間何分何秒経過したかをlistenerで確認することができるものです.
+
 
 ## コマンドの詳細
 * talker
 
-	開始されてから何秒経過したかを計測し, 出力するパブリッシャーのノードです.
+	開始されてから何秒経過したかを計測し, 出力するノードです.
 
 * listener
 
-	パブリッシャーから出力された数字を何時何分何秒という表記に変換し, 標準出力するサブスクライバーのノードです.
+	パブリッシャーから出力された数字を何時何分何秒という表記に変換し, 標準出力するノードです.
 
 * トピック
 
 	talkerが開始されてから経過した秒数の数字です.
 
 ## 使用方法
-ros2, githubがインストールされている環境で行ってください.
+ros2がインストールされている環境で行ってください.
 
 ご自身のros2のワークスペースに以下のコマンドで移動してください.
 ```
-$ cd (ご自身のros2のワークスペースのディレクトリ名)
+$ cd ros2_ws
 ```
 次に以下のコマンドを入力して, ディレクトリを移動してください.
 ```
@@ -35,26 +38,24 @@ $ ls
 ```
 以下のコマンドでワークスペースに移動し, ビルドしてください.
 ```
-$ cd ~/(ご自身のros2のディレクトリ名)
+$ cd ~/ros2_ws
 $ colcon build
 $ source ~/.bashrc
 ```
 
-## 実行方法
+## 実行方法, 実行結果
 * 端末１
 ```
-$ cd ~/(ご自身のros2のディレクトリ名)
+$ cd ~/ros2_ws
 $ ros2 run mypkg talker 
 ```
 
 * 端末２
 ```
-$ cd ~/(ご自身のros2のディレクトリ名)
+$ cd ~/ros2_ws
 $ ros2 run mypkg listener
-```
-## 実行結果
-端末2
-```
+
+
 [INFO] [listener]: Listen: 0 h 59 m 54 s
 [INFO] [listener]: Listen: 0 h 59 m 55 s
 [INFO] [listener]: Listen: 0 h 59 m 56 s
@@ -74,9 +75,11 @@ $ ros2 run mypkg listener
 * Python
 	* テスト済:ver.3.7～3.10
 * ros2
+	* ver.humble
 
 ## テスト環境
 * Ubuntu 22.04.2 LTS
+* ros2 humble
 * 1時間以上が正常に表示されるかのテストは, 時間の進む速度を疑似的に100倍にしてテストしています. 
 
 ## ライセンス関連
